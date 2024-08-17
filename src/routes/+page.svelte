@@ -16,8 +16,8 @@
 	let topArtists = data.topArtists.items;
 	let onRepeatIds = data.onRepeatIds;
 	let audioAnalysis = calculateAverages(data.topAudioAnalysis.audio_features);
-	console.log('audioAnalysis', audioAnalysis);
-	console.log(onRepeatIds);
+	// console.log('audioAnalysis', audioAnalysis);
+	// console.log(onRepeatIds);
 	console.log(data);
 </script>
 

@@ -47,6 +47,7 @@
 		"svelte-sonner": "^0.3.27",
 		"tailwind-merge": "^2.5.2",
 		"tailwind-variants": "^0.2.1",
-		"vaul-svelte": "^0.3.2"
+		"vaul-svelte": "^0.3.2",
+		"vite-plugin-top-level-await": "^1.4.4"
 	}
 }

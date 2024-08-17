@@ -9,10 +9,11 @@
 		{albumTitle}
 	</div>
 
-	<div class="relative h-[250px] w-full overflow-hidden rounded-lg">
+	<a class="relative h-[250px] w-full overflow-hidden rounded-lg">
 		<Carousel particlesToShow={5} particlesToScroll={1} arrows={true} autoplay>
 			{#each albumData as album, index}
-				<div
+				<a
+					href={`/album/${album.album.id}`}
 					class="relative mx-3 h-64 rounded-2xl bg-cover bg-center shadow-lg"
 					style={`background-image: url(${album.album.images[0].url})`}
 				>
@@ -28,8 +29,8 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			{/each}
 		</Carousel>
-	</div>
+	</a>
 </div>
