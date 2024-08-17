@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { convertKeyToPitchClass } from '$lib/utils';
 	import { convertMilliseconds } from '$lib/utils/timer';
 
 	export let audioAnalysis;
@@ -30,7 +31,7 @@
 	<span>
 		<span class="font-semibold">Key:</span>
 		<span class="text-2xl font-semibold text-green">
-			{audioAnalysis.key}
+			{convertKeyToPitchClass(Math.round(audioAnalysis.key))}
 		</span>
 	</span>
 	<!-- Loudness -->

@@ -75,20 +75,7 @@ export function calculateAverages(audioFeatures) {
 }
 
 export function convertKeyToPitchClass(key) {
-	const pitchClasses = [
-		'C',
-		'C♯/D♭',
-		'D',
-		'D♯/E♭',
-		'E',
-		'F',
-		'F♯/G♭',
-		'G',
-		'G♯/A♭',
-		'A',
-		'A♯/B♭',
-		'B'
-	];
+	const pitchClasses = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 
 	if (key === -1) {
 		return 'No key detected';
