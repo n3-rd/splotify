@@ -14,6 +14,9 @@ importers:
       '@tabler/icons-svelte':
         specifier: ^3.12.0
         version: 3.12.0(svelte@4.2.18)
+      '@tanstack/svelte-query':
+        specifier: ^5.51.21
+        version: 5.51.21(svelte@4.2.18)
       bits-ui:
         specifier: ^0.21.13
         version: 0.21.13(svelte@4.2.18)
@@ -696,6 +699,14 @@ packages:
 
   '@tabler/icons@3.12.0':
     resolution: {integrity: sha512-Im37ar/mQkqLb6XUXsU7nOc4/66VB9/3KLuZ+6tUsJKHHNLaDUkYfCTNG3pnGDI03laByxVf5+umSNK2yPTx8A==}
+
+  '@tanstack/query-core@5.51.21':
+    resolution: {integrity: sha512-POQxm42IUp6n89kKWF4IZi18v3fxQWFRolvBA6phNVmA8psdfB1MvDnGacCJdS+EOX12w/CyHM62z//rHmYmvw==}
+
+  '@tanstack/svelte-query@5.51.21':
+    resolution: {integrity: sha512-NaayXSdq6LDxcbtrdo45dliFuXz7tHfDSijDyyGQv5R7bqIaK1OJ2io+mXF75ufIj1WReR1tNb9qGBOjo8/Jqw==}
+    peerDependencies:
+      svelte: ^3.54.0 || ^4.0.0 || ^5.0.0-next.0
 
   '@tootallnate/once@2.0.0':
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
@@ -2852,6 +2863,13 @@ snapshots:
       svelte: 4.2.18
 
   '@tabler/icons@3.12.0': {}
+
+  '@tanstack/query-core@5.51.21': {}
+
+  '@tanstack/svelte-query@5.51.21(svelte@4.2.18)':
+    dependencies:
+      '@tanstack/query-core': 5.51.21
+      svelte: 4.2.18
 
   '@tootallnate/once@2.0.0': {}
 

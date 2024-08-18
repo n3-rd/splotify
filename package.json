@@ -35,6 +35,7 @@
 	"dependencies": {
 		"@tabler/icons": "^3.12.0",
 		"@tabler/icons-svelte": "^3.12.0",
+		"@tanstack/svelte-query": "^5.51.21",
 		"bits-ui": "^0.21.13",
 		"clsx": "^2.1.1",
 		"embla-carousel": "^8.1.8",

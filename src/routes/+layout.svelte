@@ -11,6 +11,16 @@
 	import { page } from '$app/stores';
 	import { IconSmartHome } from '@tabler/icons-svelte';
 	import Miniplayer from '$lib/components/player/miniplayer.svelte';
+	import { browser } from '$app/environment';
+	import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query';
+
+	const queryClient = new QueryClient({
+		defaultOptions: {
+			queries: {
+				enabled: browser
+			}
+		}
+	});
 	let currentRoute = $page.route.id;
 	console.log(currentRoute);
 	const navItems = [
@@ -70,7 +80,9 @@
 				<TopNav {profile} />
 			</div>
 			<main class="pb-24">
-				<slot></slot>
+				<QueryClientProvider client={queryClient}>
+					<slot></slot>
+				</QueryClientProvider>
 			</main>
 		</div>
 		<Miniplayer />
