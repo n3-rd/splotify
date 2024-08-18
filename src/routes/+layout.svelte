@@ -6,8 +6,15 @@
 	import * as Tooltip from '$lib/components/ui/tooltip/index';
 	import TopProfile from '$lib/components/layout/top-profile.svelte';
 	import TopNav from '$lib/components/layout/top-nav.svelte';
+
+	import { Slider } from '$lib/components/ui/slider';
+	import { page } from '$app/stores';
+	import { IconSmartHome } from '@tabler/icons-svelte';
+	import Miniplayer from '$lib/components/player/miniplayer.svelte';
+	let currentRoute = $page.route.id;
+	console.log(currentRoute);
 	const navItems = [
-		{ name: 'Home', icon: Home, href: '/' },
+		{ name: 'Home', icon: IconSmartHome, href: '/' },
 		{ name: 'Explore', icon: Compass, href: '/admin/app/users' },
 		{ name: 'Library', icon: LibraryBig, href: '/admin/app/analytics' },
 		{ name: 'Likes', icon: Heart, href: '/admin/app/webhooks' }
@@ -34,7 +41,13 @@
 									{...builder}
 								>
 									<!-- <icon class="h-5 w-5" /> -->
-									<svelte:component this={icon} size="30" class="opacity-60" />
+									<svelte:component
+										this={icon}
+										fill={currentRoute == href
+											? 'var(--color-primary)'
+											: 'var(--color-muted-foreground)'}
+										size="30"
+									/>
 								</a>
 							</Tooltip.Trigger>
 							<Tooltip.Content side="right">{name}</Tooltip.Content>
@@ -56,10 +69,11 @@
 			<div class="relative">
 				<TopNav {profile} />
 			</div>
-			<main class="">
+			<main class="pb-24">
 				<slot></slot>
 			</main>
 		</div>
+		<Miniplayer />
 	</div>
 {:else}
 	<p>You are logged out</p>
