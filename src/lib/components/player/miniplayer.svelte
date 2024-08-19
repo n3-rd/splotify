@@ -43,8 +43,7 @@
 	<div class="player__controls flex flex-col items-center gap-3">
 		<div class="controls__actions flex items-center gap-6">
 			<IconArrowsShuffle
-				class="h-5 w-5 cursor-pointer"
-				color={playerMeta.shuffle_state ? '#1DB954' : '#B3B3B3'}
+				class={`h-5 w-5 cursor-pointer ${playerMeta.shuffle_state ? 'text-green-500' : 'text-gray-400'}`}
 			/>
 			<IconPlayerSkipBackFilled class="h-5 w-5 cursor-pointer" />
 			<div
@@ -54,8 +53,7 @@
 			</div>
 			<IconPlayerSkipForwardFilled class="h-5 w-5 cursor-pointer" />
 			<IconRepeat
-				class="h-5 w-5 cursor-pointer"
-				color={playerMeta.repeat_state === 'on' ? '#1DB954' : '#B3B3B3'}
+				class={`h-5 w-5 cursor-pointer ${playerMeta.repeat_state === 'on' ? 'text-green-500' : 'text-gray-400'}`}
 			/>
 		</div>
 
