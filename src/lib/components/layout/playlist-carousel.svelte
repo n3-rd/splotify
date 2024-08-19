@@ -13,7 +13,7 @@
 		<Carousel particlesToShow={5} particlesToScroll={1} arrows={true} autoplay>
 			{#each playlistData as playlist, index}
 				<a
-					href={`/playlists/${playlist.id}`}
+					href={`/playlist/${playlist.id}`}
 					class="relative mx-3 h-64 rounded-2xl bg-cover bg-center shadow-lg"
 					style={`background-image: url(${playlist.images[0].url})`}
 				>
