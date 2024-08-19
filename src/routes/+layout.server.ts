@@ -13,8 +13,17 @@ export const load: PageServerLoad = async ({ fetch, cookies }) => {
 			return res.json();
 		}
 	});
+
+	// Initial player info fetch
+	const playerInfo = await fetch('https://api.spotify.com/v1/me/player', {
+		headers: { Authorization: `Bearer ${accessToken}` }
+	}).then((res) => res.json());
+
 	return {
 		userInfo,
-		loggedIn
+		loggedIn,
+		playerInfo,
+		// Add a new endpoint for client-side refreshing
+		playerInfoEndpoint: '/api/player-info'
 	};
 };
